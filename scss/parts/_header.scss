@@ -1,0 +1,95 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    .intro {
+        width: 40%;
+        h2 {
+            font-size: 2.625rem;
+            color: $dark-magenta;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 0.875rem;
+            color: $dark-grayish-magenta;
+            line-height: 1.25rem;
+        }
+    }
+
+    .rating-bars {
+        width: 50%;
+        .rating {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2.5rem;
+            background-color: $light-grayish-magenta;
+            border-radius: 0.625rem;
+            width: 500px;
+
+            &:nth-child(2n) {
+                margin-left: 3.125rem;
+            }
+
+            &:nth-child(3n) {
+                margin-left: 6.25rem;
+            }
+
+            .stars {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    margin: 0 5px;
+                }
+            }
+
+            .rate-info {
+                p {
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                    color: $dark-magenta;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0.9375rem;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    header {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.25rem;
+
+        .intro {
+            width: 100%;
+            text-align: center;
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5625rem;
+            }
+        }
+
+        .rating-bars {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .rating {
+                margin: 0.625rem 0 !important;
+                flex-direction: column;
+                width: 100%;
+                .stars {
+                    margin-bottom: 0.625rem;
+                }
+            }
+        }
+    }
+}
